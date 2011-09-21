@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="demo"/>
+	<classpathentry kind="src" path="libs/jquery"/>
+	<classpathentry kind="src" path="libs/jsunit/app"/>
+	<classpathentry kind="src" path="libs/jsunit/lib"/>
+	<classpathentry excluding="core/|config/|utils/|controller/|cache/|routing/|ajax/" kind="src" path="src"/>
+	<classpathentry kind="src" path="src/ajax"/>
+	<classpathentry kind="src" path="src/cache"/>
+	<classpathentry kind="src" path="src/config"/>
+	<classpathentry kind="src" path="src/controller"/>
+	<classpathentry kind="src" path="src/core"/>
+	<classpathentry kind="src" path="src/routing"/>
+	<classpathentry kind="src" path="src/utils"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>
