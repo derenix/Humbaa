@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="Humbaa">
+	
+	<target name="start">
+		<echo>Starting...</echo>
+	</target>
+	
+</project>

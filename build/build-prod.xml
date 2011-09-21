@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<project name="build-dev" default="concat" basedir="../">
+	
+	<!-- do prod stuff here -->
+	
+</project>
