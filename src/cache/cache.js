@@ -36,16 +36,20 @@
 				
 				if(!this.initialzied) this.initStorages();
 				
+				// @REFACTOR we usually does not have a cache by the first call.. cookie based cache.. no.
 				if(  this.storages.localStorage.instance.checkCompatibility() && this.storages.localStorage.instance.has(startPage) )
 				{
+					Humbaa.log("Set storage to localStorage");
 					this.activeStorage = this.storages.localStorage.instance;
 				}
 				else if( this.storages.sqlite.instance.checkCompatibility() && this.storages.sqlite.instance.has(startPage) )
 				{
+					Humbaa.log("Set storage to sqlite");
 					this.activeStorage = this.storages.sqlite.instance;
 				}
 				else if( this.storages.cookie.instance.has(startPage) )
 				{
+					Humbaa.log("Set storage to cookie");
 					this.activeStorage = this.storages.cookie.instance;
 				}
 				
@@ -100,6 +104,13 @@
 				if( !this.initialzied ) this.init();
 				
 				return this.activeStorage.get( key );
+			},
+			
+			set: function( key, value ) {
+
+				if( !this.initialzied ) this.init();
+				
+				return this.activeStorage.set( key, value );
 			}
 			
 		};

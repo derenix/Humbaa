@@ -23,7 +23,7 @@
 		},
 		
 		get: function( key ) {
-			return localStorage.get( Humbaa.Config.get("storageBase") + "_" + key );
+			return localStorage.getItem( Humbaa.Config.get("storageBase") + "_" + key );
 		},
 		
 		set: function(key, value, expiration, meta ) {
@@ -34,7 +34,7 @@
 					"payload": value
 			};
 			
-			return localStorage.set( Humbaa.Config.get("storageBase") + "_" + key, obj );
+			return localStorage.setItem( Humbaa.Config.get("storageBase") + "_" + key, obj );
 		},
 		
 		doDelete: function(key) {

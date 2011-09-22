@@ -10,7 +10,7 @@
 		return {
 			config: {
 				"controller": Humbaa.Controller,
-				"cache": Humaa.Cache,
+				"cache": Humbaa.Cache,
 				"startPage": "/",
 				"storageBase": "Humbaa"
 			},
@@ -20,11 +20,10 @@
 			},
 			
 			get: function( key ) {
-				debugger;
 				return this.config[key];
 			}
 			
 		};
-	};
+	}();
 	
 })();
