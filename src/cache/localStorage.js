@@ -23,23 +23,26 @@
 		},
 		
 		get: function( key ) {
-			return "[LS] " + key;
+			return localStorage.get( Humbaa.Config.get("storageBase") + "_" + key );
 		},
 		
 		set: function(key, value, expiration, meta ) {
-			return key;
+			
+			var obj = {
+					"lifeTime": expiration,
+					"meta": meta,
+					"payload": value
+			};
+			
+			return localStorage.set( Humbaa.Config.get("storageBase") + "_" + key, obj );
 		},
 		
 		doDelete: function(key) {
-			return true;
+			return !!(this.set(key, null, -1));
 		},
 		
 		has: function( key ) {
-			return true;
-		},
-		
-		wipe: function() {
-			return true;
+			return !!(this.get(key));
 		}
 	};
 		

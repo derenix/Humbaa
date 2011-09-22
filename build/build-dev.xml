@@ -10,6 +10,8 @@
 				<file name="core/core.js" />
 				<file name="core/loader.js" />
 				
+				<file name="config/config.js" />
+				
 				<file name="cache/cache.js" />
 				<file name="cache/localStorage.js" />
 				<file name="cache/sqlite.js" />
@@ -26,7 +28,9 @@
 				<file name="controller/controller.js" />
 				
 				<file name="utils/utils.js" />
+				<file name="utils/utf8.js" />
 				<file name="utils/math.js" />
+				<file name="utils/sha1.js" />
 				<file name="utils/md5.js" />
 			</filelist>
 		</concat>

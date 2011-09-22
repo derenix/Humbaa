@@ -50,6 +50,10 @@ Humbaa.namespace = function(namespaceName) {
  */
 Humbaa.extend = function(subc, superc, overrides) {
 	
+	if( typeof Humbaa.Loader.getJQuery() != "undefined" ) {
+		return jQuery.extend(subc, superc);
+	}
+	
 	var F = function() {},
 		i=0;
 	
